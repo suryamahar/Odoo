@@ -13,8 +13,8 @@ public class LoginPage {
 	@FindBy(id = "password")
 	private WebElement passTxtBx;
 	
-	@FindBy(className = "btn btn-primary btn-block")
-	public WebElement loginBtn;
+	@FindBy(xpath = "//button[text()='Log in']")
+	private WebElement loginBtn;
 	
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -33,7 +33,7 @@ public class LoginPage {
 	public void login(String email, String password) {
 		emailTxtBx.sendKeys(email);
 		passTxtBx.sendKeys(password);
-		loginBtn.click();
+		loginBtn.submit();
 	}
 
 }

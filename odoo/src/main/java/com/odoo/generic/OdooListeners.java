@@ -64,10 +64,10 @@ public class OdooListeners implements ITestListener {
 	public void onFinish(ITestContext context) {
 		Reporter.log("Suite execution Finished at"+ new Date(), true);
 		
-		Reporter.log("Total test executed"+ totalTest, true);
-		Reporter.log("Total test passed"+ testPassed, true);
-		Reporter.log("Total test failed"+ testFailed, true);
-		Reporter.log("Total test skipped"+ testSkipped, true);
+		Reporter.log("Total test executed "+ totalTest, true);
+		Reporter.log("Total test passed "+ testPassed, true);
+		Reporter.log("Total test failed "+ testFailed, true);
+		Reporter.log("Total test skipped "+ testSkipped, true);
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

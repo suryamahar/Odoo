@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.odoo.generic.OdooListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="baseurl" value="https://rodlox.odoo.com/web/login"/>
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="com.odoo.scripts.CreatePipeline">
+        <methods>
+          <include name="postCondition"/>
+          <include name="preCondition"/>
+          <include name="createPipeline"/>
+        </methods>
+      </class> <!-- com.odoo.scripts.CreatePipeline -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
